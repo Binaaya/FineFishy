@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FineFish - Premium Seafood Delivered</title>
+    <!-- CSS files -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-fish"></i>
+          </div>
+          <span class="logo-text">FineFish</span>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="product.html" class="nav-link">Products</a>
+          <a href="about.html" class="nav-link">About Us</a>
+
+          <!-- Search Bar -->
+          <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              placeholder="Search for seafood..."
+              class="search-input"
+            />
+            <button class="search-button">Search</button>
+          </div>
+
+          <div class="nav-actions">
+            <a href="#" class="btn-login">
+              <i class="fas fa-user"></i>
+              Login/Register
+            </a>
+
+            <div class="cart-container">
+              <button class="cart-button">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-badge">3</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Ocean-Fresh Seafood <br />Delivered to Your Door</h1>
+            <p>
+              We bring you the finest, sustainably-sourced seafood from trusted
+              fishermen to your table. Freshness guaranteed or your money back.
+            </p>
+            <div class="hero-buttons">
+              <button class="btn-primary">
+                Shop Now <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img
+              src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+              alt="Fresh seafood selection"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">Why Choose FineFish?</h2>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-anchor"></i>
+            </div>
+            <h3>Direct from Fishermen</h3>
+            <p>
+              We work directly with trusted fishermen to bring you the freshest
+              catch with no middlemen.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h3>Sustainable Practices</h3>
+            <p>
+              100% of our seafood is sustainably sourced to protect our oceans
+              for future generations.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-truck"></i>
+            </div>
+            <h3>Next-Day Delivery</h3>
+            <p>
+              Order by 2pm and get your seafood delivered fresh the next day in
+              temperature-controlled packaging.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Products -->
+    <section class="products">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Popular Selections</h2>
+          <a href="product.html" class="view-all">View All Products →</a>
+        </div>
+
+        <div class="products-grid">
+          <!-- Product 1 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="assets/images/products/salmon.jpg" alt="Wild Salmon" />
+              <div class="product-tag bestseller">BESTSELLER</div>
+            </div>
+            <h3>Wild Alaskan Salmon</h3>
+            <p>Sustainably caught in Alaska</p>
+            <div class="product-footer">
+              <span class="product-price">$24.99/lb</span>
+              <button class="btn-secondary">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="assets/images/products/lobster.jpg"
+                alt="Atlantic Lobster"
+              />
+            </div>
+            <h3>Maine Lobster Tails</h3>
+            <p>Fresh from the Atlantic</p>
+            <div class="product-footer">
+              <span class="product-price">$39.99 each</span>
+              <button class="btn-secondary">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="assets/images/products/scallops.jpg" alt="Scallops" />
+              <div class="product-tag new">NEW</div>
+            </div>
+            <h3>Diver Scallops</h3>
+            <p>Hand-harvested, dayboat scallops</p>
+            <div class="product-footer">
+              <span class="product-price">$29.99/lb</span>
+              <button class="btn-secondary">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="assets/images/products/tuna.jpg" alt="Tuna" />
+            </div>
+            <h3>Sushi-Grade Tuna</h3>
+            <p>Premium yellowfin tuna</p>
+            <div class="product-footer">
+              <span class="product-price">$34.99/lb</span>
+              <button class="btn-secondary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <div class="container">
+        <h2>Join Our Seafood Community</h2>
+        <p>
+          Sign up for our newsletter to receive exclusive offers, seasonal
+          recipes, and the latest on sustainable seafood.
+        </p>
+
+        <form class="newsletter-form">
+          <input
+            type="email"
+            placeholder="Your email address"
+            class="newsletter-input"
+          />
+          <button type="submit" class="btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <div class="footer-logo">
+              <div class="footer-logo-icon">
+                <i class="fas fa-fish"></i>
+              </div>
+              <span>FineFish</span>
+            </div>
+            <p>Sustainable seafood for everyone.</p>
+            <div class="social-icons">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>Shop</h3>
+            <ul>
+              <li><a href="product.html">All Products</a></li>
+              <li><a href="product.html">New Arrivals</a></li>
+              <li><a href="product.html">Best Sellers</a></li>
+              <li><a href="product.html">Seasonal Specials</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3>About</h3>
+            <ul>
+              <li><a href="about.html">Our Story</a></li>
+              <li><a href="about.html">Sustainability</a></li>
+              <li><a href="about.html">Fishermen Partners</a></li>
+              <li><a href="about.html">Careers</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3>Help</h3>
+            <ul>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Shipping Info</a></li>
+              <li><a href="#">Returns Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2023 FineFish. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript files -->
+    <script src="js/script.js"></script>
+    <script src="js/login-modal.js"></script>
+  </body>
+</html>

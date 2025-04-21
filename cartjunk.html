@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | FineFish - Premium Seafood Delivered</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f5f9fc;
+            color: #333333;
+            line-height: 1.6;
+        }
+        
+        .cart-item {
+            transition: all 0.3s ease;
+        }
+        
+        .cart-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .quantity-btn {
+            transition: all 0.2s ease;
+        }
+        
+        .quantity-btn:hover {
+            background-color: #e0f2fe;
+        }
+        
+        .checkout-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .checkout-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white mr-2">
+                    <i class="fas fa-fish"></i>
+                </div>
+                <span class="text-xl font-semibold">FineFish</span>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-blue-500">Home</a>
+                <a href="product.html" class="text-gray-600 hover:text-blue-500">Products</a>
+                <a href="about.html" class="text-gray-600 hover:text-blue-500">About Us</a>
+                
+                <div class="flex items-center space-x-4">
+                    <a href="login.html" class="text-gray-600 hover:text-blue-500">
+                        <i class="fas fa-user mr-1"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="cart.html" class="relative text-blue-500">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+                    </a>
+                </div>
+            </div>
+            
+            <button class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Cart Section -->
+    <main class="flex-grow">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex items-center mb-6">
+                <h1 class="text-2xl md:text-3xl font-bold text-gray-800">Your Shopping Cart</h1>
+                <span class="ml-2 px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">3 items</span>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Cart Items -->
+                <div class="lg:w-2/3">
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <!-- Cart Header -->
+                        <div class="hidden md:grid grid-cols-12 bg-gray-50 px-6 py-3 text-sm font-medium text-gray-500 uppercase tracking-wider">
+                            <div class="col-span-5">Product</div>
+                            <div class="col-span-2 text-center">Price</div>
+                            <div class="col-span-3 text-center">Quantity</div>
+                            <div class="col-span-2 text-right">Total</div>
+                        </div>
+                        
+                        <!-- Cart Items List -->
+                        <div class="divide-y divide-gray-200">
+                            <!-- Item 1 -->
+                            <div class="cart-item grid grid-cols-2 md:grid-cols-12 gap-4 p-4 md:p-6">
+                                <div class="col-span-2 md:col-span-5 flex items-center">
+                                    <div class="w-20 h-20 rounded-lg overflow-hidden mr-4">
+                                        <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Salmon Fillet" class="w-full h-full object-cover">
+                                    </div>
+                                    <div>
+                                        <h3 class="font-medium text-gray-800">Fresh Atlantic Salmon Fillet</h3>
+                                        <p class="text-sm text-gray-500">500g</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-span-1 md:col-span-2 flex md:block items-center">
+                                    <span class="md:hidden text-sm text-gray-500 mr-2">Price:</span>
+                                    <span class="font-medium text-gray-800">$18.99</span>
+                                </div>
+                                
+                                <div class="col-span-1 md:col-span-3 flex items-center justify-center">
+                                    <div class="flex items-center border border-gray-200 rounded-lg">
+                                        <button class="quantity-btn px-3 py-1 text-gray-500 hover:text-blue-500">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <span class="px-3 py-1 text-gray-800">1</span>
+                                        <button class="quantity-btn px-3 py-1 text-gray-500 hover:text-blue-500">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-span-2 md:col-span-2 flex items-center justify-end">
+                                    <span class="font-medium text-gray-800">$18.99</span>
+                                    <button class="ml-4 text-gray-400 hover:text-red-500">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Item 2 -->
+                            <div class="cart-item grid grid-cols-2 md:grid-cols-12 gap-4 p-4 md:p-6">
+                                <div class="col-span-2 md:col-span-5 flex items-center">
+                                    <div class="w-20 h-20 rounded-lg overflow-hidden mr-4">
+                                        <img src="https://images.unsplash.com/photo-1518540113463-95a5a92a7d3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Tuna Steak" class="w-full h-full object-cover">
+                                    </div>
+                                    <div>
+                                        <h3 class="font-medium text-gray-800">Premium Tuna Steak</h3>
+                                        <p class="text-sm text-gray-500">300g</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-span-1 md:col-span-2 flex md:block items-center">
+                                    <span class="md:hidden text-sm text-gray-500 mr-2">Price:</span>
+                                    <span class="font-medium text-gray-800">$22.50</span>
+                                </div>
+                                
+                                <div class="col-span-1 md:col-span-3 flex items-center justify-center">
+                                    <div class="flex items-center border border-gray-200 rounded-lg">
+                                        <button class="quantity-btn px-3 py-1 text-gray-500 hover:text-blue-500">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <span class="px-3 py-1 text-gray-800">2</span>
+                                        <button class="quantity-btn px-3 py-1 text-gray-500 hover:text-blue-500">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-span-2 md:col-span-2 flex items-center justify-end">
+                                    <span class="font-medium text-gray-800">$45.00</span>
+                                    <button class="ml-4 text-gray-400 hover:text-red-500">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Item 3 -->
+                            <div class="cart-item grid grid-cols-2 md:grid-cols-12 gap-4 p-4 md:p-6">
+                                <div class="col-span-2 md:col-span-5 flex items-center">
+                                    <div class="w-20 h-20 rounded-lg overflow-hidden mr-4">
+                                        <img src="https://images.unsplash.com/photo-1566981207-9a5b5d962b8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Shrimp" class="w-full h-full object-cover">
+                                    </div>
+                                    <div>
+                                        <h3 class="font-medium text-gray-800">Jumbo Tiger Shrimp</h3>
+                                        <p class="text-sm text-gray-500">1kg</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-span-1 md:col-span-2 flex md:block items-center">
+                                    <span class="md:hidden text-sm text-gray-500 mr-2">Price:</span>
+                                    <span class="font-medium text-gray-800">$24.99</span>
+                                </div>
+                                
+                                <div class="col-span-1 md:col-span-3 flex items-center justify-center">
+                                    <div class="flex items-center border border-gray-200 rounded-lg">
+                                        <button class="quantity-btn px-3 py-1 text-gray-500 hover:text-blue-500">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <span class="px-3 py-1 text-gray-800">1</span>
+                                        <button class="quantity-btn px-3 py-1 text-gray-500 hover:text-blue-500">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-span-2 md:col-span-2 flex items-center justify-end">
+                                    <span class="font-medium text-gray-800">$24.99</span>
+                                    <button class="ml-4 text-gray-400 hover:text-red-500">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Cart Actions -->
+                        <div class="p-4 md:p-6 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center">
+                            <div class="mb-4 sm:mb-0">
+                                <input type="text" placeholder="Coupon code" class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <button class="ml-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">Apply</button>
+                            </div>
+                            <button class="px-4 py-2 text-gray-600 hover:text-red-500">
+                                <i class="fas fa-trash mr-2"></i>
+                                <span>Clear Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <a href="product.html" class="flex items-center text-blue-500 hover:text-blue-600">
+                            <i class="fas fa-arrow-left mr-2"></i>
+                            <span>Continue Shopping</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Order Summary -->
+                <div class="lg:w-1/3">
+                    <div class="bg-white rounded-xl shadow-sm p-6 sticky top-6">
+                        <h2 class="text-lg font-bold text-gray-800 mb-4">Order Summary</h2>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Subtotal</span>
+                                <span class="font-medium">$88.98</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Shipping</span>
+                                <span class="font-medium">$5.99</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Tax</span>
+                                <span class="font-medium">$7.12</span>
+                            </div>
+                            <div class="flex justify-between border-t border-gray-200 pt-3">
+                                <span class="text-gray-600">Discount</span>
+                                <span class="font-medium text-green-500">-$5.00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center mb-6 pt-4 border-t border-gray-200">
+                            <span class="text-lg font-bold text-gray-800">Total</span>
+                            <span class="text-xl font-bold text-blue-600">$97.09</span>
+                        </div>
+                        
+                        <button class="w-full checkout-btn bg-blue-500 hover:bg-blue-600 text-white py-3 px-4 rounded-lg font-medium">
+                            Proceed to Checkout
+                        </button>
+                        
+                        <div class="mt-4 flex items-center justify-center">
+                            <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Visa" class="h-8 mx-2">
+                            <img src="https://cdn-icons-png.flaticon.com/512/196/196566.png" alt="Mastercard" class="h-8 mx-2">
+                            <img src="https://cdn-icons-png.flaticon.com/512/196/196561.png" alt="PayPal" class="h-8 mx-2">
+                        </div>
+                        
+                        <div class="mt-6 text-center text-sm text-gray-500">
+                            <p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our <a href="#" class="text-blue-500 hover:underline">privacy policy</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white mr-2">
+                        <i class="fas fa-fish text-sm"></i>
+                    </div>
+                    <span class="text-lg font-semibold">FineFish</span>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-6 pt-6 text-center md:text-left">
+                <p class="text-gray-400 text-sm">© 2023 FineFish. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Quantity adjustment functionality
+        document.querySelectorAll('.quantity-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const container = this.closest('.flex');
+                const quantityElement = container.querySelector('span');
+                let quantity = parseInt(quantityElement.textContent);
+                
+                if (this.querySelector('.fa-minus')) {
+                    if (quantity > 1) {
+                        quantityElement.textContent = quantity - 1;
+                    }
+                } else if (this.querySelector('.fa-plus')) {
+                    quantityElement.textContent = quantity + 1;
+                }
+                
+                // In a real app, you would update the cart total here
+            });
+        });
+        
+        // Remove item functionality
+        document.querySelectorAll('.fa-trash').forEach(icon => {
+            icon.addEventListener('click', function() {
+                const item = this.closest('.cart-item');
+                item.style.opacity = '0';
+                setTimeout(() => {
+                    item.remove();
+                    // In a real app, you would update the cart count and total here
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>
